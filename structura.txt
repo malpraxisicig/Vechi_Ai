@@ -1,0 +1,40 @@
+STRUCTURA MODELULUI raport-ro:latest
+Server AI: ubuntu-4gb-fsn1-1 (100.89.166.40)  |  salvat: 2026-09-04 (read-only de pe server, nimic modificat)
+
+=== REZUMAT ===
+- Model custom, inregistrat in Ollama ca: raport-ro:latest
+- Bazat pe / derivat din: qwen2.5:7b-instruct
+- Familie: qwen2 | Format: GGUF | Tip: 7.6B | Cuantizare: Q4_K_M
+- Dimensiune weights: ~4.68 GB (4.683.073.952 bytes)
+
+=== MANIFEST (manifests/registry.ollama.ai/library/raport-ro/latest) ===
+config.digest = sha256:d883bdb86e86c27fe96001d308272d0d86c0d9ba95582a32c37d8df1a06642d2 (561 B)
+Layers:
+  1. model     sha256:2bada8a7450677000f678be90653b85d364de7db25eb5ea54136ada5f3933730  4.683.073.952 B  (from qwen2.5:7b-instruct)
+  2. template  sha256:eb4402837c7829a690fa845de4d7f3fd842c2adee476d5341da8a46ea9255175  1.482 B         (from qwen2.5:7b-instruct)
+  3. license   sha256:832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e  11.343 B        (from qwen2.5:7b-instruct)
+  4. system    sha256:2fcb527e7557eb45a0361b1f4ac6cc7af11e65c1c5c5862b87c75477bf81919c  357 B
+  5. params    sha256:bb39d57298c5a9988aae2f0e9e36e6a8f4a104c00f07cc7838f385ece9fd7f84  47 B
+
+=== CONFIG (config.json) ===
+{"model_format":"gguf","model_family":"qwen2","model_families":["qwen2"],
+ "model_type":"7.6B","file_type":"Q4_K_M","architecture":"amd64","os":"linux",
+ "rootfs":{"type":"layers","diff_ids":["sha256:2bada8a7450...","sha256:eb4402837c7...",
+ "sha256:832dd9e00a6...","sha256:2fcb527e755...","sha256:bb39d57298c..."]}}
+
+=== PARAMS ===
+{"num_ctx":8192,"temperature":0.5,"top_p":0.9}
+
+=== SYSTEM PROMPT (layer system, 357 B) ===
+Esti analist expert care scrie EXCLUSIV in limba romana, gramatical corect si cu diacritice.
+Redactezi rapoarte structurate, analitice, dense, fara umplutura, fara englezisme si fara cuvinte
+inventate. Folosesti tabele Markdown reale si complete. Nu inventezi cifre sau statistici ca fapte;
+marchezi estimarile cu [estimare]. Nu lasi rapoartele neterminate.
+
+=== TEMPLATE ===
+Chat template ChatML (qwen2 / <|im_start|>), identic cu cel din qwen2.5:7b-instruct.
+
+=== Alte modele instalate alaturi (pe acelasi Ollama) ===
+- qwen2.5:3b (fast/chat)
+- qwen2.5:7b-instruct (modelul parinte)
+- nomic-embed-text (embeddings)
