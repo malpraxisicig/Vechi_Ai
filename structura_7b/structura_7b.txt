@@ -1,0 +1,43 @@
+STRUCTURA MODELULUI qwen2.5:7b-instruct
+Server AI: ubuntu-4gb-fsn1-1 (100.89.166.40) | salvat: 2026-09-04 (read-only)
+
+=== REZUMAT ===
+- Model de chat (instruct).
+- Familie: qwen2 | Format: GGUF | Tip: 7.6B | Quantizare: Q4_K_M
+- Context: 32768 | embedding_length: 3584 | capabilities: completion, tools
+- Dimensiune weights: 4.683.073.952 B (~4,68 GB)
+- IMPORTANT: este MODELUL PARINTE din care derivă raport-ro =
+  IMPARTE ACELASI fișier de weights (sha256:2bada8a7...) cu raport-ro.
+- NU este folosit direct de Psihoscale_AI (el folosește doar qwen2.5:3b).
+  Psihoplay_AI folosește raport-ro, care se bazează pe cel.
+
+=== MANIFEST (manifests/registry.ollama.ai/library/qwen2.5/7b-instruct) ===
+config.digest = sha256:2f15b3218f0552c60647ce60ada83632d2c09755b16259b13e3e4458e9ae419d (487 B)
+Layers:
+  1. model    sha256:2bada8a7450677000f678be90653b85d364de7db25eb5ea54136ada5f3933730  4.683.073.952 B  (ACELASI cu raport-ro)
+  2. system   sha256:66b9ea09bd5b7099cbb4fc820f31b575c0366fa439b08245566692c6784e281e  68 B
+  3. template sha256:eb4402837c7829a690fa845de4d7f3fd842c2adee476d5341da8a46ea9255175  1.482 B
+  4. license  sha256:832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e  11.343 B
+
+=== CONFIG (config.json) ===
+{"model_format":"gguf","model_family":"qwen2","model_families":["qwen2"],
+ "model_type":"7.6B","file_type":"Q4_K_M","architecture":"amd64","os":"linux",
+ "rootfs":{"type":"layers","diff_ids":["sha256:2bada8a745...","sha256:75357d685f...","sha256:9bebd78bf5...","sha256:832dd9e00a..."]}}
+
+=== SYSTEM PROMPT (layer system, 68 B) ===
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.
+
+=== TEMPLATE ===
+ChatML (qwen2 / <|im_start|>) — identic cu raport-ro (acelasi digest sha256:eb4402...).
+
+=== Register tags ===
+name: qwen2.5:7b-instruct
+modified_at: 2026-07-07T22:34:52, size: 4683087332,
+digest: 845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e
+
+=== NOTA ===
+Fișierele structurale sunt copiate separat in folderul structura_7b/
+(manifests/7b-instruct + blobs config/system). Template+license (digesturi
+identice cu raport-ro) le avem deja in raport-ro_Vechi_Ai.
+Weights-ul de 4,68 GB (sha256:2bada8a7...) este COMUN cu raport-ro — se
+descarca o singura data pentru ambele.

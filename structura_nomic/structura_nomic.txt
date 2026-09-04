@@ -1,0 +1,33 @@
+STRUCTURA MODELULUI nomic-embed-text:latest
+Server AI: ubuntu-4gb-fsn1-1 (100.89.166.40) | salvat: 2026-09-04 (read-only)
+
+=== REZUMAT ===
+- Model de EMBEDDINGS (vectori), nu de chat.
+- Familie: nomic-bert | Format: GGUF | Tip: 137M | Quantizare: F16
+- Context: 2048 | embedding_length: 768 | capabilities: embedding
+- Dimensiune weights: 274.290.656 B (~274 MB)
+- NU este folosit de Psihoscale_AI, Psihoplay_AI nici Timingmall (zero referinte in cod/config)
+
+=== MANIFEST (manifests/registry.ollama.ai/library/nomic-embed-text/latest) ===
+config.digest = sha256:31df23ea7daa448f9ccdbbcecce6c14689c8552222b80defd3830707c0139d4f (420 B)
+Layers:
+  1. model   sha256:970aa74c0a90ef7482477cf803618e776e173c007bf957f635f1015bfcfef0e6  274.290.656 B
+  2. license sha256:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4  11.357 B
+  3. params  sha256:ce4a164fc04605703b485251fe9f1a181688ba0eb6badb80cc6335c0de17ca0d  17 B
+
+=== CONFIG (config.json) ===
+{"model_format":"gguf","model_family":"nomic-bert","model_families":["nomic-bert"],
+ "model_type":"137M","file_type":"F16","architecture":"amd64","os":"linux",
+ "rootfs":{"type":"layers","diff_ids":["sha256:970aa74c0a9...","sha256:c71d239df91...","sha256:ce4a164fc04..."]}}
+
+=== PARAMS ===
+{"num_ctx":8192}
+
+=== Register tags (ollama list) ===
+name: nomic-embed-text:latest
+modified_at: 2026-07-07T23:46:08.445Z
+size: 274302450, digest: 0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f
+
+=== NOTA ===
+Fișierele structurale sunt copiate separat in folderul structura_nomic/
+(manifests/latest + blobs). Weights-ul de 274 MB NU este inclus (e optional).
